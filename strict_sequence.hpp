@@ -112,7 +112,7 @@ namespace ds2i {
                 if (all_ones_sequence::bitsize(params, universe, n) == 0) {
                     m_type = all_ones;
                 } else {
-                    m_type = index_type(bv.get_word56(offset)
+                    m_type = index_type(bv.get_word(offset)
                                         & ((uint64_t(1) << type_bits) - 1));
                 }
 

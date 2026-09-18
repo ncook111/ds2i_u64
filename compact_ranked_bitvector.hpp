@@ -320,7 +320,7 @@ namespace ds2i {
                     return 0;
                 } else {
                     return
-                        m_bv->get_word56(offset + (i - 1) * size)
+                        m_bv->get_word(offset + (i - 1) * size)
                         & ((uint64_t(1) << size) - 1);
                 }
             }

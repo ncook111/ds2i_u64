@@ -144,7 +144,7 @@ namespace ds2i {
 
                     uint64_t universe_bits = ceil_log2(universe);
                     m_cur_base = it.take(universe_bits);
-                    auto ub = 0;
+                    uint64_t ub = 0;
                     if (n > 1) {
                         uint64_t universe_delta = read_delta(it);
                         ub = universe_delta ? universe_delta : (universe - m_cur_base - 1);
@@ -301,7 +301,7 @@ namespace ds2i {
                 assert(m_partitions > 1);
 
                 uint64_t endpoint = partition
-                    ? (m_bv->get_word56(m_endpoints_offset +
+                    ? (m_bv->get_word(m_endpoints_offset +
                                         (partition - 1) * m_endpoint_bits)
                        & ((uint64_t(1) << m_endpoint_bits) - 1))
                     : 0;
