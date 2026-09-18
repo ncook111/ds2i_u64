@@ -7,7 +7,7 @@
 
 namespace ds2i {
 
-    typedef uint32_t posting_t ;
+    typedef uint64_t posting_t;
     typedef uint64_t cost_t;
 
     struct optimal_partition {
